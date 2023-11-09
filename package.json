@@ -28,7 +28,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_ENV=production OTHERFLAG=myValue webpack --config build/webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -55,6 +55,7 @@
     "babel-loader": "^8.2.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.0"
   }
 }
